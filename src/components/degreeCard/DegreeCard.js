@@ -1,31 +1,31 @@
 import React from "react";
 import "./DegreeCard.css";
-import { Fade } from "react-reveal";
+import { Fade, Flip } from "react-reveal";
 import { style } from "glamor";
 
 function DegreeCard(props) {
   const degree = props.degree;
   const theme = props.theme;
 
-  // const style_img = style({
-  //   width: "220px",
-  //   height: "auto",
-  //   borderRadius: " 50%",
-  //   padding: "10px",
-  //   border: `1px solid ${theme.accentColor}`,
-  //   marginRight: "50px",
-  //   boxShadow: `0px 0px 5px ${theme.accentColor}`,
-  //   transition: "all 0.2s ease-in-out",
-  //   ":hover": {
-  //     color: "rgba(255, 255, 255, 1)",
-  //     boxShadow: `0 5px 15px ${theme.accentColor}`,
-  //   },
-  //   "@media (max-width: 768px)": {
-  //     marginLeft: "50px",
-  //     marginBottom: "15px",
-  //     width: "175px",
-  //   },
-  // });
+  const style_img = style({
+    width: "220px",
+    height: "auto",
+    borderRadius: " 50%",
+    padding: "10px",
+    border: `1px solid ${theme.accentColor}`,
+    marginRight: "50px",
+    boxShadow: `0px 0px 5px ${theme.accentColor}`,
+    transition: "all 0.2s ease-in-out",
+    ":hover": {
+      color: "rgba(255, 255, 255, 1)",
+      boxShadow: `0 5px 15px ${theme.accentColor}`,
+    },
+    "@media (max-width: 768px)": {
+      marginLeft: "50px",
+      marginBottom: "15px",
+      width: "175px",
+    },
+  });
 
   const card_body = style({
     borderBottom: `1px solid ${theme.accentColor}`,
@@ -69,7 +69,7 @@ function DegreeCard(props) {
 
   return (
     <div className="degree-card">
-      {/* <Flip left duration={2000}>
+      <Flip left duration={2000}>
         <div {...style_img}>
           <img
             style={{
@@ -81,7 +81,7 @@ function DegreeCard(props) {
             alt={degree.alt_name}
           />
         </div>
-      </Flip> */}
+      </Flip>
       <Fade right duration={2000} distance="40px">
         <div {...card_body}>
           <div

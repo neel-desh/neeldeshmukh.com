@@ -244,7 +244,7 @@ const degrees = {
     {
       title: "Jaihind College, Churchgate",
       subtitle: "Vocational Software Development",
-      logo_path: "",
+      logo_path: "jaihindcollege.jpeg",
       alt_name: "Jaihind",
       duration: "2017 -2021",
       descriptions: [
